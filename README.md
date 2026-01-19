@@ -18,6 +18,7 @@ Esquema relacional normalizado até à **3ª Forma Normal (3FN)** para garantir 
 
 ## 📂 Estrutura do Projeto
 
+```text
 novos-horizontes/
 │
 ├── modelo-conceptual/
@@ -45,6 +46,7 @@ novos-horizontes/
 │
 ├── Relatorio_BD.pdf               # Relatório do projeto
 └── README.md                      # Ficheiro README
+```
 
 ## 👥 Autores
 * **Matheus Azevedo** - [GitHub](https://github.com/matheusm18)
