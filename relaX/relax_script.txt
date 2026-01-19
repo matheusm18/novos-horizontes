@@ -1,0 +1,130 @@
+group: ViagensNH
+
+Professor = {
+ id_professor:number, nome:string
+ 5001, 'Marcelo Almeida'
+ 5002, 'Sofia Nunes'
+ 5003, 'Rita Carvalho'
+ 5004, 'Pedro Duarte'
+}
+
+Aluno = {
+ id_aluno:number, nome:string, genero:string, ano:number, letra:string
+ 2001, 'Ana Silva', 'F', 9, 'A'
+ 2002, 'Bruno Costa', 'M', 6, 'B'
+ 2003, 'Carla Rocha', 'F', 11, 'A'
+ 2004, 'Diogo Pereira', 'M', 7, 'C'
+ 2005, 'Eva Martins', 'F', 6, 'B'
+ 2006, 'Fábio Santos', 'M', 12, 'A'
+ 2007, 'Gabriela Lopes', 'F', 10, 'C'
+ 2008, 'Henrique Dias', 'M', 12, 'A'	
+ 2009, 'Inês Faria', 'F', 7, 'B'
+ 2010, 'João Neves', 'M', 6, 'C'
+}
+
+Viagem = {
+ id_viagem:number, titulo:string, data_publicacao:string, resumo:string, id_professor:number
+ 1, 'Lisboa Histórica', '2024-03-12', 'Exploração aprofundada da história de Lisboa, analisando os seus monumentos, evolução urbana e impacto cultural ao longo dos séculos.', 5001
+ 2, 'Porto Animal', '2024-03-20', 'Viagem educativa dedicada ao estudo da fauna, abordando biodiversidade, habitats naturais e a importância da preservação das espécies.', 5002
+ 3, 'Madrid Artística', '2024-04-05', 'Percurso cultural pelos principais museus e espaços artísticos de Madrid, contextualizando as obras e os seus autores.', 5003
+ 4, 'Paris Monumental', '2024-04-18', 'Viagem interdisciplinar que relaciona matemática, arquitetura e história através da análise dos monumentos icónicos de Paris.', 5001
+ 5, 'Roma Antiga', '2024-05-01', 'Exploração detalhada da civilização romana, destacando arquitetura, política e legado cultural da Roma Antiga.', 5004
+ 6, 'Berlim Contemporânea', '2024-05-15', 'Análise da história recente de Berlim, com foco na divisão da cidade, na Guerra Fria e na reunificação alemã.', 5003
+ 7, 'Ciência em Munique', '2024-05-25', 'Viagem virtual dedicada à ciência e tecnologia, explorando museus científicos e inovações desenvolvidas em Munique.', 5002
+ 8, 'Barcelona Criativa', '2024-06-05','Exploração artística e arquitetónica da cidade de Barcelona, com destaque para as obras de Antoni Gaudí.', 5001
+}
+
+Aluno_Viagem = {
+ id_aluno:number, id_viagem:number, avaliacao:number, comentario:string, data_realizacao:string
+ 2001, 1, 10, 'Viagem extremamente enriquecedora que ajudou a compreender melhor a história e identidade cultural de Lisboa.', '2024-03-13'
+ 2001, 4, 8, 'Gostei muito da ligação entre matemática e arquitetura, especialmente na análise dos monumentos parisienses.', '2024-04-19'
+ 2002, 1, 9, 'Atividade bastante interessante que reforçou os meus conhecimentos sobre a história de Portugal.', '2024-03-13'
+ 2002, 2, 10, 'Experiência educativa e envolvente, com conteúdos bem explicados sobre os animais e os seus habitats.', '2024-03-21'
+ 2003, 2, 8, 'Aprendi bastante sobre biodiversidade e preservação ambiental ao longo da viagem.', '2024-03-21'
+ 2003, 3, 9, 'Viagem cultural muito inspiradora que despertou ainda mais o meu interesse pela arte.', '2024-04-06'
+ 2004, 3, 7, 'Conteúdos bem estruturados que ajudaram a compreender melhor o contexto artístico de Madrid.', '2024-04-06'
+ 2005, 5, 10, 'Excelente abordagem à história romana, com explicações claras e exemplos bem escolhidos.', '2024-05-02'
+ 2005, 8, 7, 'Gostei especialmente da arquitetura de Gaudí e da forma criativa como os conteúdos foram apresentados.', '2024-06-06'
+ 2006, 2, 8, 'Viagem muito bem organizada e educativa, com exemplos claros e interessantes.', '2024-03-21'
+ 2006, 7, 8, 'Experiência bastante interessante que mostrou a importância da ciência e da inovação.', '2024-05-26'
+ 2007, 4, 9, 'A ligação entre diferentes disciplinas tornou a viagem muito mais interessante.', '2024-04-19'
+ 2008, 3, 8, 'Viagem cultural rica e bem contextualizada, com bons exemplos artísticos.', '2024-04-06'
+ 2008, 6, 9, 'Gostei muito da forma como a história recente de Berlim foi explicada.', '2024-05-16'
+ 2009, 5, 7, 'Aprendi bastante sobre a civilização romana e o seu impacto na atualidade.', '2024-05-02'
+ 2010, 1, 8, 'Viagem interessante e bem organizada, com conteúdos claros e acessíveis.', '2024-03-13'
+}
+
+Disciplina = {
+ id_disciplina:number, nome:string, ano:number
+ 1, 'Educação Visual', 5
+ 2, 'História', 6
+ 3, 'Matemática', 7
+ 4, 'Ciências Naturais', 8
+ 5, 'Física e Química', 9
+ 6, 'Português', 10
+}
+
+Viagem_Disciplina = {
+ id_viagem:number, id_disciplina:number
+ 1,2
+ 2,4
+ 3,1
+ 3,2
+ 4,2
+ 4,3
+ 5,2
+ 6,2
+ 7,5
+ 8,1
+}
+
+Pais = {
+ id_pais:number, pais:string
+ 1, 'Portugal'
+ 2, 'Espanha'
+ 3, 'França'
+ 4, 'Itália'
+ 5, 'Alemanha'
+}
+
+Cidade = {
+ id_cidade:number, cidade:string, id_pais:number
+ 1, 'Lisboa', 1
+ 2, 'Porto', 1
+ 3, 'Madrid', 2
+ 4, 'Barcelona', 2
+ 5, 'Paris', 3
+ 6, 'Marselha', 3
+ 7, 'Roma', 4
+ 8, 'Milão', 4
+ 9, 'Berlim', 5
+ 10, 'Munique', 5
+}
+
+Localizacao = {
+ id_localizacao:number, nome:string, id_cidade:number
+ 1, 'Torre de Belém', 1
+ 2, 'Zoológico', 1
+ 3, 'Ribeira', 2
+ 4, 'Sé do Porto', 2
+ 5, 'Museu do Prado', 3
+ 6, 'Parque Güell', 4
+ 7, 'Torre Eiffel', 5
+ 8, 'Louvre', 5
+ 9, 'Coliseu', 7
+ 10, 'Porta de Brandemburgo', 9
+}
+
+Conteudo = {
+ id_conteudo:number, url:string, descricao:string, titulo:string, tipo:string, data_captura:string, id_viagem:number, id_localizacao:number
+ 1, 'https://img1.jpg', 'Fotografia detalhada da Torre de Belém, evidenciando os elementos arquitetónicos manuelinos.', 'Torre de Belém', 'F', '2024-03-12', 1, 1
+ 2, 'https://vid1.mov', 'Vídeo educativo sobre o Oceanário de Lisboa, mostrando diversas espécies marinhas.', 'Oceanário de Lisboa', 'V', '2024-03-12', 1, 2
+ 3, 'https://img2.jpg', 'Imagem panorâmica da Ribeira do Porto, destacando a arquitetura tradicional.', 'Ribeira do Porto', 'F', '2024-03-20', 2, 3
+ 4, 'https://img3.jpg', 'Fotografia da Sé do Porto ao entardecer, evidenciando o seu valor histórico.', 'Sé do Porto', 'F', '2024-03-20', 2, 4
+ 5, 'https://img4.jpg', 'Imagem do Museu do Prado com destaque para a sua importância artística.', 'Museu do Prado', 'F', '2024-04-05', 3, 5
+ 6, 'https://vid2.mov', 'Vídeo panorâmico do Parque Güell, destacando a arquitetura modernista.', 'Parque Güell', 'V', '2024-06-05', 8, 6
+ 7, 'https://img5.jpg', 'Fotografia noturna da Torre Eiffel iluminada.', 'Torre Eiffel', 'F', '2024-04-18', 4, 7
+ 8, 'https://vid3.mov', 'Vídeo da entrada do Museu do Louvre, mostrando a pirâmide central.', 'Museu do Louvre', 'V', '2024-04-18', 4, 8
+ 9, 'https://vid4.mov', 'Vídeo ilustrativo do Coliseu Romano, explorando a sua estrutura.', 'Coliseu Romano', 'V', '2024-05-01', 5, 9
+ 10, 'https://img6.jpg', 'Fotografia da Porta de Brandemburgo, símbolo histórico de Berlim.', 'Porta de Brandemburgo', 'F', '2024-05-15', 6, 10
+}
