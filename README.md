@@ -5,6 +5,8 @@ Sistema de base de dados relacional para catalogação e gestão de viagens virt
 ## 📝 Descrição
 O projeto consistiu na criação de um SBD centralizado para a Escola Novos Horizontes, permitindo a gestão de conteúdos multimédia, interações de alunos e controlo de acessos (RBAC). O sistema garante a integridade dos dados e otimiza a pesquisa de recursos educativos.
 
+## ⭐️ Nota Final: 16/20
+
 ## 🖼️ Modelação
 ### Modelo Conceptual
 Representação das entidades e relações através de um Diagrama Entidade-Relacionamento (DER).
